@@ -1,5 +1,7 @@
 # checkPropTypes
 
+[![Build Status](https://travis-ci.org/ratehub/check-prop-types.svg?branch=master)](https://travis-ci.org/ratehub/check-prop-types)
+
 Manually check [PropTypes](https://github.com/facebook/prop-types)-compatible proptypes, returning any errors instead of logging them to `console.error`.
 
 This function is more suitable for checking propTypes in unit tests than [mocking `console.error`](https://stackoverflow.com/q/26124914/1299695), avoiding some serious [problems](https://stackoverflow.com/q/41916992/1299695) with that approach.

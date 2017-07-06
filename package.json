@@ -13,6 +13,10 @@
     "testing"
   ],
   "author": "uniphil",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ratehub/check-prop-types.git"
+  },
   "license": "MIT",
   "devDependencies": {
     "prop-types": "^15.5.10",

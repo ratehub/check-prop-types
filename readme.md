@@ -35,4 +35,27 @@ result = checkPropTypes(HelloComponent.propTypes, { name: 123 }, 'prop', HelloCo
 assert(`result` === 'Failed prop type: Invalid prop `name` of type `number` supplied to `HelloComponent`, expected `string`.');
 ```
 
+### assertPropTypes
+
+To throw errors instead of returning them, a helper called `assertPropTypes` is included:
+
+```js
+import PropTypes from 'prop-types';
+import { assertPropTypes } from 'check-prop-types';
+
+const HelloComponent = ({ name }) => (
+  <h1>Hi, {name}</h1>
+);
+
+HelloComponent.propTypes = {
+  name: PropTypes.string.isRequired,
+};
+
+assertPropTypes(HelloComponent.propTypes, { name: 'Julia' }, 'prop', HelloComponent.name);
+// fine...
+
+assertPropTypes(HelloComponent.propTypes, { name: 123 }, 'prop', HelloComponent.name);
+// throws Error: Failed prop type: Invalid prop `name` of type `number` supplied to `HelloComponent`, expected `string`.
+```
+
 See [test.js](./test.js) for more usage examples.

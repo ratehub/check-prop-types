@@ -57,4 +57,17 @@ function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
   }
 }
 
+/**
+ * Same as checkPropTypes but throws on error
+ */
+function assertPropTypes() {
+  if (process.env.NODE_ENV !== 'production') {
+    var error = checkPropTypes.apply(null, arguments);
+    if (error) {
+      throw new Error(error);
+    }
+  }
+}
+
 module.exports = checkPropTypes;
+module.exports.assertPropTypes = assertPropTypes;

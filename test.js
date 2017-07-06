@@ -39,3 +39,16 @@ test('Does not avoid failing the same problem multiple times', function(assert) 
   assert.true(checkPropTypes({x: PropTypes.string}, {x: 1}, 'prop'));
   assert.true(checkPropTypes({x: PropTypes.string}, {x: 1}, 'prop'));
 });
+
+test('assertPropTypes throws instead of returning error', function(assert) {
+  var assertPropTypes = checkPropTypes.assertPropTypes;
+  assert.plan(2);
+
+  assert.doesNotThrow(function() {
+    assertPropTypes({x: PropTypes.number}, {x: 1}, 'prop', 'c');
+  });
+
+  assert.throws(function() {
+    assertPropTypes({x: PropTypes.number}, {x: ''}, 'prop', 'c');
+  });
+});

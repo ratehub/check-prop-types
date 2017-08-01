@@ -29,7 +29,7 @@ HelloComponent.propTypes = {
 };
 
 let result = checkPropTypes(HelloComponent.propTypes, { name: 'Julia' }, 'prop', HelloComponent.name);
-assert(result === null);
+assert(result === undefined);
 
 result = checkPropTypes(HelloComponent.propTypes, { name: 123 }, 'prop', HelloComponent.name);
 assert(result === 'Failed prop type: Invalid prop `name` of type `number` supplied to `HelloComponent`, expected `string`.');

@@ -8,6 +8,16 @@ test('Good props check falsy', function(assert) {
   assert.ifError(checkPropTypes({x: PropTypes.number}, {x: 1}, 'prop'));
 });
 
+test('Specifically, good props check undefined (#1)', function(assert) {
+  assert.plan(3);
+  assert.is(checkPropTypes({}, {}, 'prop'),
+    undefined);
+  assert.is(checkPropTypes({x: PropTypes.number}, {x: 1}, 'prop'),
+    undefined);
+  assert.isNot(checkPropTypes({}, {}, 'prop'),
+    null);
+});
+
 test('Bad props return a message', function(assert) {
   assert.plan(1);
   var message = checkPropTypes({x: PropTypes.number}, {x: ''}, 'prop', 'C');

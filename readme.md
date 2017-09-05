@@ -1,6 +1,7 @@
 # checkPropTypes
 
 [![Build Status](https://travis-ci.org/ratehub/check-prop-types.svg?branch=master)](https://travis-ci.org/ratehub/check-prop-types)
+[![View on npm](https://img.shields.io/npm/v/check-prop-types.svg)](https://www.npmjs.com/package/check-prop-types)
 
 Manually check [PropTypes](https://github.com/facebook/prop-types)-compatible proptypes, returning any errors instead of logging them to `console.error`.
 

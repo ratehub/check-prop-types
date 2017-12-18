@@ -1,6 +1,6 @@
 {
   "name": "check-prop-types",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Check PropTypes, returning errors instead of logging them",
   "main": "index.js",
   "scripts": {

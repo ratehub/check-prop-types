@@ -24,6 +24,6 @@
     "tape": "^4.7.0"
   },
   "peerDependencies": {
-    "prop-types": "<=15.5.10"
+    "prop-types": "<=15.6.0"
   }
 }

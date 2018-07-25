@@ -1,6 +1,6 @@
-const test = require('tape');
-const PropTypes = require('prop-types');
-const checkPropTypes = require('.');
+var test = require('tape');
+var PropTypes = require('prop-types');
+var checkPropTypes = require('.');
 
 test('Good props check falsy', function(assert) {
   assert.plan(2);

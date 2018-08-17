@@ -59,4 +59,38 @@ assertPropTypes(HelloComponent.propTypes, { name: 123 }, 'prop', HelloComponent.
 // throws Error: Failed prop type: Invalid prop `name` of type `number` supplied to `HelloComponent`, expected `string`.
 ```
 
+### Working with multiple Props and PropTypes.isRequired()
+
+When testing PropTypes on components that feature multiple props, or required props, specifying a subset of the component's props in the test will maintain test isolation:
+
+```js
+import PropTypes from 'prop-types'
+import { checkPropTypes } from 'check-prop-types';
+
+const HelloComponent = ({ firstName, lastName }) => (
+    <h1>Hi, {firstName} {lastName}</h2>
+);
+
+HelloComponent.propTypes = {
+    firstName: PropTypes.string.isRequired,
+    lastName: PropTypes.string
+};
+
+checkPropTypes(
+    { firstName: HelloComponent.propTypes.firstName },
+    {},
+    'prop',
+    'HelloComponent'
+); 
+// Returns: Failed prop type: The prop `firstName` is marked as required in HelloComponent
+
+checkPropTypes(
+    { lastName: HelloComponent.propTypes.lastName },
+    { lastName: 123 },
+    'prop'
+    'HelloComponent'
+); 
+// Returns: Failed prop type: Invalid prop `lastName` of type `number` supplied to HelloComponent
+``` 
+
 See [test.js](./test.js) for more usage examples.

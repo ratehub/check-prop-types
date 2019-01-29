@@ -11,7 +11,7 @@ Forked from https://github.com/ratehub/check-prop-types to have a build output u
 ## Install
 
 ```bash
-$ npm install --save-dev check-prop-types
+$ npm install --save wattyrev-check-prop-types
 ```
 
 ## Usage
@@ -20,7 +20,7 @@ Call it just like `PropTypes.checkPropTypes`, but it returns any problems as an 
 
 ```js
 import PropTypes from "prop-types";
-import checkPropTypes from "check-prop-types";
+import checkPropTypes from "wattyrev-check-prop-types";
 
 const HelloComponent = ({ name }) => <h1>Hi, {name}</h1>;
 
@@ -54,7 +54,7 @@ To throw errors instead of returning them, a helper called `assertPropTypes` is 
 
 ```js
 import PropTypes from "prop-types";
-import { assertPropTypes } from "check-prop-types";
+import { assertPropTypes } from "wattyrev-check-prop-types";
 
 const HelloComponent = ({ name }) => <h1>Hi, {name}</h1>;
 

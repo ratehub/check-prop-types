@@ -22,7 +22,7 @@
  */
 function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
   if (process.env.NODE_ENV !== 'production') {
-    const ReactPropTypesSecret = require('prop-types/lib/ReactPropTypesSecret');
+    var ReactPropTypesSecret = require('prop-types/lib/ReactPropTypesSecret');
     var name = componentName || 'React class';
     for (var typeSpecName in typeSpecs) {
       if (typeSpecs.hasOwnProperty(typeSpecName)) {

@@ -1,6 +1,6 @@
 {
-  "name": "check-prop-types",
-  "version": "1.1.2",
+  "name": "wattyrev-check-prop-types",
+  "version": "1.0.0",
   "description": "Check PropTypes, returning errors instead of logging them",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,7 @@
   "author": "uniphil",
   "repository": {
     "type": "git",
-    "url": "git@github.com:ratehub/check-prop-types.git"
+    "url": "git@github.com:WattyRev/check-prop-types.git"
   },
   "license": "MIT",
   "devDependencies": {

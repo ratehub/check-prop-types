@@ -1,6 +1,6 @@
 {
   "name": "check-prop-types",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "Check PropTypes, returning errors instead of logging them",
   "main": "index.js",
   "scripts": {
@@ -19,11 +19,11 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "prop-types": "^15.5.10",
+    "prop-types": "^15.6.0",
     "tap-spec": "^4.1.1",
     "tape": "^4.7.0"
   },
   "peerDependencies": {
-    "prop-types": "<=15.6.0"
+    "prop-types": "^15.6.0"
   }
 }

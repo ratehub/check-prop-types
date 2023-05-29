@@ -18,7 +18,8 @@
  * @param {object} values Runtime values that need to be type-checked
  * @param {string} location e.g. "prop", "context", "child context"
  * @param {string} componentName Name of the component for error messages.
- * @param {?Function} getStack Returns the component stack.
+ * @param {Function} [getStack] Returns the component stack.
+ * @returns {string | undefined} Returns null if there is no error, otherwise a string message is returned.
  */
 function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
   if (process.env.NODE_ENV !== 'production') {
